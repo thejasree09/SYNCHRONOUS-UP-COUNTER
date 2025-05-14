@@ -28,19 +28,37 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+Module sync_up_counter created with inputs clk, rst and output count [3:0].
+
+4-bit register count declared to hold counter value.
+
+On rising edge of clk, if rst==1, count resets to 0; else increments by 1.
+
+Counter wraps around automatically after reaching 4'b1111 (15).
+
+
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+![program](https://github.com/user-attachments/assets/d3a7b7bb-b6f4-41d8-bca8-24cb5eb7a8d2)
 
-Developed by: RegisterNumber:
-*/
 
 **RTL LOGIC UP COUNTER**
 
+![simulation](https://github.com/user-attachments/assets/9ac7134b-4c1c-4ee8-aaa0-750475868ba8)
+
+
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+![waveform](https://github.com/user-attachments/assets/08df83b9-f03a-4678-8b93-dd0beabe9c5b)
+
 
 **TRUTH TABLE**
 
+![tt](https://github.com/user-attachments/assets/22fe97ea-2bb8-484b-8907-4374613893f8)
+
+
 **RESULTS**
+
+Simulation successful — Counter increments synchronously with clock and matches expected binary count sequence.
